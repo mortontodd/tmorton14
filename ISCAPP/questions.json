@@ -1,0 +1,24 @@
+{
+  "plays": {
+    "run": {
+      "min": -2,
+      "max": 7,
+      "turnoverChance": 0.01
+    },
+    "shortPass": {
+      "min": 0,
+      "max": 14,
+      "turnoverChance": 0.05
+    },
+    "deepBall": {
+      "min": 0,
+      "max": 40,
+      "turnoverChance": 0.12
+    },
+    "qbSneak": {
+      "min": 0,
+      "max": 3,
+      "turnoverChance": 0.02
+    }
+  }
+}

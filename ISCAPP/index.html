@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4th Down Frenzy</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game-container">
+
+  <!-- HEADER -->
+  <header class="game-header">
+    <h1>🏈 4th Down Frenzy</h1>
+
+    <div class="scoreboard">
+      <div>Score: <span id="score">0</span></div>
+      <div>Drives: <span id="drives">0</span></div>
+      <div>TDs: <span id="touchdowns">0</span></div>
+    </div>
+  </header>
+
+  <!-- FIELD -->
+  <section class="field-container">
+
+    <div class="field">
+      <div id="yardMarker" class="yard-marker"></div>
+
+      <!-- Yard Labels -->
+      <div class="yard-lines">
+        <span>20</span>
+        <span>30</span>
+        <span>40</span>
+        <span>50</span>
+        <span>40</span>
+        <span>30</span>
+        <span>20</span>
+        <span>TD</span>
+      </div>
+    </div>
+
+    <div class="field-info">
+      <h2 id="downDisplay">1st & 10</h2>
+      <p>Ball on: <span id="yardLine">20</span> yard line</p>
+      <p>Yards to go: <span id="yardsToGo">10</span></p>
+    </div>
+
+  </section>
+
+  <!-- PLAY CONTROLS -->
+  <section class="controls">
+
+    <button class="play-btn run" data-play="run">Run</button>
+    <button class="play-btn short" data-play="shortPass">Short Pass</button>
+    <button class="play-btn deep" data-play="deepBall">Deep Ball</button>
+    <button class="play-btn sneak" data-play="qbSneak">QB Sneak</button>
+
+  </section>
+
+  <!-- RESULT DISPLAY -->
+  <section class="result-section">
+    <h3 id="playResult">Start your drive.</h3>
+  </section>
+
+  <!-- DRIVE LOG -->
+  <section class="log-section">
+    <h3>Drive Log</h3>
+    <div id="log"></div>
+  </section>
+
+  <!-- NEW DRIVE BUTTON -->
+  <section class="reset-section">
+    <button id="newDriveBtn">Start New Drive</button>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todd Morton | Accounting Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-dark: #0a0f1a;
+            --bg-card: #161e2d;
+            --accent-red: #cc0033;
+            --text-main: #ffffff;
+            --text-muted: #94a3b8;
+            --border: rgba(255,255,255,0.1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(10,15,26,0.9);
+            border-bottom: 1px solid var(--border);
+            padding: 15px 0;
+            z-index: 1000;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 130px 0 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+        }
+
+        .hero span {
+            color: var(--accent-red);
+        }
+
+        .hero-subtitle {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 1.05rem;
+        }
+
+        .profile-img {
+            width: 240px;
+            height: 240px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 6px solid var(--bg-card);
+            box-shadow: 0 0 35px rgba(204,0,51,0.25);
+        }
+
+        section {
+            padding: 45px 0;
+        }
+
+        h2 {
+            color: var(--accent-red);
+            margin-bottom: 20px;
+            font-size: 1.7rem;
+        }
+
+        h3 {
+            margin-bottom: 8px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+        }
+
+        .card ul {
+            padding-left: 20px;
+            margin-top: 12px;
+        }
+
+        .card li {
+            margin-bottom: 10px;
+            color: #dbe4f0;
+        }
+
+        .app-card {
+            background: linear-gradient(145deg,#1e293b,#0f172a);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 30px;
+            transition: 0.25s ease;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.35);
+        }
+
+        .app-card p {
+            color: var(--text-muted);
+            margin: 10px 0 15px;
+        }
+
+        .app-link {
+            color: #38bdf8;
+            text-decoration: none;
+            font-weight: 700;
+        }
+
+        .app-link:hover {
+            text-decoration: underline;
+        }
+
+        .hobby-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .hobby-section img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .hobby-section ul {
+            list-style: none;
+        }
+
+        .hobby-section li {
+            margin-bottom: 14px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 800px) {
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .hobby-section {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="container">
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#coursework">Coursework</a>
+            <a href="#app">Game</a>
+            <a href="#hobbies">Hobbies</a>
+        </div>
+    </div>
+</nav>
+
+<header class="container hero">
+    <div>
+        <h1>Todd <span>Morton</span></h1>
+        <p class="hero-subtitle">
+            Accounting Student | Future CPA | Tax Intern
+        </p>
+    </div>
+
+    <img src="Assets/PFP.jpeg" alt="Todd Morton profile picture" class="profile-img">
+</header>
+
+<div class="container">
+
+    <section id="about">
+        <h2>About Me</h2>
+
+        <div class="card">
+            <p>
+                I am a senior at Rutgers Business School majoring in Accounting with a strong interest in tax,
+                auditing, and financial reporting. Through my internship experience and coursework, I have developed
+                practical skills in tax preparation, bookkeeping, reconciliations, and data analysis.
+            </p>
+
+            <p style="margin-top: 15px;">
+                I am currently preparing to sit for the CPA exam and am focused on building a strong foundation
+                in both technical accounting knowledge and real-world application. I am especially interested in
+                opportunities that allow me to continue learning, take on responsibility, and grow within the
+                accounting profession.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2>Professional Experience</h2>
+
+        <div class="card">
+            <h3>The Kurzer Group — Tax Intern</h3>
+            <p><em>September 2025 – April 2026</em></p>
+
+            <ul>
+                <li>Prepared and organized Form 1040 source documentation by summarizing W-2s, 1099s, and K-1s into structured Excel-based tax lead sheets.</li>
+                <li>Performed bank reconciliations in QuickBooks Online and Desktop to support accuracy and completeness of client financial records.</li>
+                <li>Projected year-end wages for individual taxpayers by analyzing pay stubs and current earnings trends.</li>
+                <li>Entered and validated trial balances in Thomson Reuters Accounting CS using data imported from QuickBooks statements.</li>
+                <li>Supported tax preparation and bookkeeping workflows by improving financial data organization and review accuracy.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>The Barn Kitchen &amp; Bar — Server</h3>
+
+            <ul>
+                <li>Managed multiple responsibilities in a fast-paced, high-pressure environment while meeting strict service timelines.</li>
+                <li>Communicated effectively with customers and team members to resolve issues quickly and maintain service quality.</li>
+                <li>Demonstrated strong attention to detail and professionalism while handling orders, payments, and guest interactions.</li>
+                <li>Delivered a high-quality customer experience by balancing efficiency, accuracy, and responsiveness.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="coursework">
+        <h2>Relevant Coursework</h2>
+
+        <div class="card">
+            <ul>
+                <li>Intermediate Accounting I &amp; II</li>
+                <li>Individual Taxation</li>
+                <li>Advanced Corporate Taxation</li>
+                <li>Accounting Information Systems</li>
+                <li>Concepts of Auditing</li>
+                <li>Audit Data Analytics</li>
+                <li>Financial Accounting</li>
+                <li>Managerial Accounting</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="app">
+        <h2>Football Minigame</h2>
+
+        <div class="app-card">
+            <h3>4th Down Frenzy 🏈</h3>
+
+            <p>
+                A football strategy game where you have four downs to drive down the field and score.
+                Choose between runs, short passes, deep balls, and QB sneaks while managing risk,
+                momentum, and field position.
+            </p>
+
+            <a href="ISCAPP/index.html" class="app-link">Play Game →</a>
+        </div>
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+
+        <div class="hobby-section">
+            <img src="Assets/fishing.jpg" alt="Fishing photo">
+
+            <ul>
+                <li>🎣 Fishing</li>
+                <li>🥊 MMA</li>
+                <li>📊 Day Trading</li>
+            </ul>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Todd Morton • Rutgers Business School
+</footer>
+
+</body>
+</html>
